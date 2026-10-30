@@ -7,51 +7,7 @@ A password-protected birthday experience for Alabi Joy, with a personal birthday
 - Node.js 20 or newer
 - Internet connection for installing dependencies, password verification, and YouTube music
 
-## Run locally on Windows
 
-1. Extract the ZIP file.
-2. Open the `alabi-joy-sweet-sixteen` folder.
-3. Click the folder’s address bar, type `powershell`, and press Enter.
-4. Create the private settings file:
-
-   ```powershell
-   Copy-Item .env.example .env
-   notepad .env
-   ```
-
-5. In Notepad, replace `APP_PASSWORD` with a private password of at least 12 characters. Replace `SESSION_SECRET` with a unique random string of at least 32 characters. Keep `.env` private and never upload it to GitHub. Save and close Notepad.
-6. Install dependencies:
-
-   ```powershell
-   npm.cmd install
-   ```
-
-7. Start the app:
-
-   ```powershell
-   npm.cmd start
-   ```
-
-8. Visit `http://localhost:3000`.
-
-Keep PowerShell open while using the local app. Stop it with Ctrl+C.
-
-## Deploy on Render
-
-Create a **Web Service** connected to the GitHub repository containing these project files. When uploading to GitHub, upload the **contents** of the `alabi-joy-sweet-sixteen` folder, not an extra enclosing folder. `package.json` must appear on the repository’s main page.
-
-- **Root Directory:** leave blank when `package.json` is at the repository root. If you intentionally keep the project inside a subfolder, set Root Directory to that exact subfolder name.
-- **Build Command:** `npm install`
-- **Start Command:** `npm start`
-- **Runtime:** Node.js 20 or newer (`.nvmrc` is included).
-
-Add these environment variables in Render:
-
-- `NODE_ENV` = `production`
-- `APP_PASSWORD` = a unique password of at least 12 characters
-- `SESSION_SECRET` = a unique random secret of at least 32 characters
-
-No MongoDB connection is required for this version. The login session is a signed, HTTP-only cookie and expires after one hour. On Render, configure HTTPS (Render provides HTTPS for its public service URL). Do not put secrets into source code or a public repository.
 
 ## Features and behavior
 
