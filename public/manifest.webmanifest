@@ -1,0 +1,13 @@
+{
+  "name": "Alabi Joy’s Sweet Sixteen",
+  "short_name": "Joy at 16",
+  "description": "A birthday surprise for Alabi Joy.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07130f",
+  "theme_color": "#07130f",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
